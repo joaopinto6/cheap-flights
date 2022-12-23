@@ -12,7 +12,12 @@ export const handler = async () => {
     
     content = hours + ":" + minutes
     console.log("content: " + content)
-    fs.writeFile('./netlify/functions/file.txt', content, { flag: 'a' }, err => {});
+    try {
+        fs.writeFileSync('./netlify/functions/file.txt', content);
+        // file written successfully
+      } catch (err) {
+        console.error(err);
+      }
     const data = fs.readFileSync('./netlify/functions/file.txt', 'utf8');
     console.log("data: " + data)
     
