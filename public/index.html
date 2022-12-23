@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cheap Flights</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="favicon_io/site.webmanifest">
+</head>
+<body>
+    <h1>Cheapest Flights Around Europe</h1>
+    <p id="checkflights"></p>
+    <script>
+        const responseText = document.getElementById('checkflights')
+        window.addEventListener('DOMContentLoaded', async () => {
+            const response = await fetch('/.netlify/functions/hello-world')
+            .then(response => response.json())
+            responseText.innerText = response.flights
+        });
+        
+        /*
+        const responseText = document.getElementById('checkflights')
+
+        fetch('/../.netlify/functions/file.txt')
+        .then(response => response.text()) 
+        .then(textString => {
+            responseText.innerText = textString
+        });*/
+    </script>
+</body>
+</html>

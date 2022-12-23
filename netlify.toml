@@ -1,0 +1,9 @@
+# example netlify.toml
+[build]
+  command = "# no build command"
+  functions = "netlify/functions"
+  publish = "public"
+
+[functions]
+  node_bundler = "esbuild"
+  included_files = ["./netlify/functions/file.txt"]
