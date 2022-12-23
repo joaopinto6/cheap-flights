@@ -9,14 +9,12 @@ export const handler = async () => {
 
     // current minutes
     let minutes = date_ob.getMinutes();
-
-    // prints time in HH:MM format
-    console.log(hours + ":" + minutes);
     
-    // content = '+1'
-    // fs.writeFile('./netlify/functions/file.txt', content, { flag: 'a' }, err => {});
-    // const data = fs.readFileSync('./netlify/functions/file.txt', 'utf8');
-    // console.log(data)
+    content = hours + ":" + minutes
+    console.log("content: " + content)
+    fs.writeFile('./netlify/functions/file.txt', content, { flag: 'a' }, err => {});
+    const data = fs.readFileSync('./netlify/functions/file.txt', 'utf8');
+    console.log("data: " + data)
     
     return {
       statusCode: 200,
