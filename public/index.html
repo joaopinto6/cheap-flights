@@ -14,7 +14,7 @@
     <script>
         const responseText = document.getElementById('checkflights')
         window.addEventListener('DOMContentLoaded', async () => {
-            const response = await fetch('/.netlify/functions/hello-world')
+            const response = await fetch('/.netlify/functions/readFile')
             .then(response => response.json())
             responseText.innerText = response.flights
         });
