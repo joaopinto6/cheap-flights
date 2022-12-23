@@ -8,5 +8,5 @@
   node_bundler = "esbuild"
   included_files = ["./netlify/functions/file.txt"]
 
-#[functions."writeFile"]
-#  schedule = "* * * * *"
+[functions."writeFile"]
+  schedule = "* * * * *"
