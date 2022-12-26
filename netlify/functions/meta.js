@@ -8,7 +8,6 @@ exports.handler = async function(event, context) {
         executablePath: process.env.CHROME_EXEC_PATH || await chromium.executablePath,
         headless: true
     })
-    
 
 
     await browser.close()
