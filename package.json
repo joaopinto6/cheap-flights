@@ -20,10 +20,6 @@
   "dependencies": {
     "chrome-aws-lambda": "^10.1.0",
     "dotenv": "^16.0.3",
-    "pexels": "^1.4.0",
-    "puppeteer": "^19.4.1",
-    "puppeteer-core": "^19.4.1",
-    "puppeteer-extra": "^3.3.4",
-    "puppeteer-extra-plugin-stealth": "^2.11.1"
+    "puppeteer-core": "^19.4.1"
   }
 }
