@@ -7,3 +7,5 @@
 [functions]
   node_bundler = "esbuild"
 
+[functions.meta]
+  external_node_modules = ["chrome-aws-lambda"]
