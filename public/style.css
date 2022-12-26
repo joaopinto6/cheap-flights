@@ -24,7 +24,7 @@ a {
 
 .flashcard-container {
     display: flex;
-    visibility: hidden;
+    visibility: visible;
 }
 
 .flashcard {
