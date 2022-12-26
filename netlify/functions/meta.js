@@ -5,7 +5,7 @@ export const handler = async () => {
     
     //preparing browser
     const browser = await puppeteer.launch({
-        args: ['--disable-dev-shm-usage'],
+        args: ['--no-sandbox', '--disable-setuid-sandbox'],
         executablePath: await chromium.executablePath,
         headless: chromium.headless
     })

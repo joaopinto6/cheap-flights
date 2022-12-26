@@ -45,8 +45,8 @@
 
     window.addEventListener("load", async () => {
         const response = await fetch('/.netlify/functions/meta')
-            .then(response => response.json()
-        )
+            .then(response => response.json())
+
         const flights_array = response.flights_array.slice(0, 3)
 
         for (let i = 0; i < image.length; i++) {
