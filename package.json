@@ -2,7 +2,7 @@
   "name": "cheap-flights",
   "version": "1.0.0",
   "description": "top 3 cheapest flight in europe",
-  "main": "index.js",
+  "main": "index.html",
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
