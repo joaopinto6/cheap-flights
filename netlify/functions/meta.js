@@ -4,12 +4,10 @@ import puppeteer from "puppeteer-core"
 export const handler = async () => {
     
     //preparing browser
-    const browser = await chromium.puppeteer.launch({
+    const browser = await puppeteer.launch({
         args: chromium.args,
-        defaultViewport: chromium.defaultViewport,
         executablePath: await chromium.executablePath,
-        headless: chromium.headless,
-        ignoreHTTPSErrors: true,
+        headless: chromium.headless
     })
     
     //preparing page
