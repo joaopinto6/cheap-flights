@@ -6,8 +6,10 @@ export const handler = async () => {
     //preparing browser
     const browser = await puppeteer.launch({
         args: chromium.args,
-        executablePath: await chromium.executablePath, // process.env.CHROME_EXECUTABLE_PATH || 
-        headless: true
+        defaultViewport: chromium.defaultViewport,
+        executablePath: await chromium.executablePath,
+        headless: chromium.headless,
+        ignoreHTTPSErrors: true,
     })
     
     //preparing page
