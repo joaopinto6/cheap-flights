@@ -4,7 +4,7 @@ import puppeteer from "puppeteer-core"
 export const handler = async () => {
     
     //preparing browser
-    const browser = await puppeteer.launch({
+    const browser = await chromium.puppeteer.launch({
         args: chromium.args,
         defaultViewport: chromium.defaultViewport,
         executablePath: await chromium.executablePath,
