@@ -1,8 +1,9 @@
 {
   "name": "cheap-flights",
   "version": "1.0.0",
-  "description": "",
+  "description": "top 3 cheapest flight in europe",
   "main": "index.js",
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,10 +17,9 @@
     "url": "https://github.com/joaopinto6/cheap-flights/issues"
   },
   "homepage": "https://github.com/joaopinto6/cheap-flights#readme",
-  "type": "module",
   "dependencies": {
     "chrome-aws-lambda": "^10.1.0",
-    "dotenv": "^16.0.3",
     "puppeteer-core": "^19.4.1"
-  }
+  },
+  "type": "module"
 }

@@ -1,9 +1,7 @@
-# example netlify.toml
 [build]
-  command = "# no build command"
-  functions = "netlify/functions"
-  publish = "public"
+	command = "# no build command"
+	functions = "netlify/functions"
+	publish = "public"
 
 [functions]
-  node_bundler = "esbuild"
-  external_node_modules = ["chrome-aws-lambda"]
+        node_bundler = "esbuild"
