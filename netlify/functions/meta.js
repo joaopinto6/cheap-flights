@@ -9,7 +9,7 @@ exports.handler = async function(event, context) {
         headless: true
     })
     
-    
+
 
     await browser.close()
 
