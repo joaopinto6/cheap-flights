@@ -2,11 +2,43 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hi</title>
+    <title>Cheap Flights</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
 </head>
 <body>
-    
+    <h1>Top 3 Voos mais Baratos</h1>
+    <p id="checkflights">loading...</p>
+    <div id="info" class="flashcard-container">
+        <div class="flashcard">
+            <img src="assets/London.jpg" alt="Image 1">
+            <h2 class="country">London</h2>
+            <p class="date">Jan 26-30, 2023</p>
+            <p class="price">27€</p>
+        </div>
+        <div class="flashcard">
+            <img src="assets/Barcelona.jpg" alt="Image 2">
+            <h2 class="country">Barcelona</h2>
+            <p class="date">Jan 26-29, 2023</p>
+            <p class="price">31€</p>
+        </div>
+        <div class="flashcard">
+            <img src="assets/Bangkok.jpg" alt="Image 3">
+            <h2 class="country">Bangkok</h2>
+            <p class="date">May 11-15, 2023</p>
+            <p class="price">32€</p>
+    </div>
 </body>
+<script>
+    const checkflights = document.getElementById('checkflights')
+    const info = document.getElementById('info');
+    
+    (async () => {
+        await new Promise(r => setTimeout(r, 0));
+        checkflights.innerHTML = ''
+        info.style.visibility = 'visible'
+    })();
+</script>
 </html>

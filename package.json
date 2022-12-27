@@ -15,9 +15,5 @@
   "bugs": {
     "url": "https://github.com/joaopinto6/cheap-flights/issues"
   },
-  "homepage": "https://github.com/joaopinto6/cheap-flights#readme",
-  "dependencies": {
-    "chrome-aws-lambda": "10.1.0",
-    "puppeteer-core": "10.2.0"
-  }
+  "homepage": "https://github.com/joaopinto6/cheap-flights#readme"
 }
