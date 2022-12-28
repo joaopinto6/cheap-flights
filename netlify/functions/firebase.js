@@ -40,16 +40,24 @@ export const handler = async () => {
     flag = 0
   
     console.log("Buscando dados")
-    const result = await db.ref('flights').once('value')
-        .then(res=>res.val())
+    const ref = await db.ref('flights')
+
+    var res = {}
+    ref.on("value", function(snapshot) {
+        res = snapshot.val()
+    }, function (error) {
+        console.log("Error: " + error.code)
+    })
+    // const res = await ref.once('value')
+    //     .then(res=>res.val())
     console.log("Dados buscados")
 
-    console.log("[+] RESULTS: " + JSON.stringify(result[0]))
+    console.log("[+] RESULTS: " + JSON.stringify(res[0]))
 
     return {
       statusCode: 200,
       body: JSON.stringify({
-        result
+        res
       }),
     }
     }
