@@ -41,15 +41,9 @@ export const handler = async () => {
   
     console.log("Buscando dados")
     const ref = await db.ref('flights')
-
-    var res = {}
-    ref.on("value", function(snapshot) {
-        res = snapshot.val()
-    }, function (error) {
-        console.log("Error: " + error.code)
-    })
-    // const res = await ref.once('value')
-    //     .then(res=>res.val())
+    console.log("REF > ONCE")
+    const res = await ref.once('value')
+        .then(res=>res.val())
     console.log("Dados buscados")
 
     console.log("[+] RESULTS: " + JSON.stringify(res[0]))
