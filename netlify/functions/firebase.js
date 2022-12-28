@@ -1,5 +1,7 @@
 import admin from 'firebase-admin'
 
+var flag = 1
+
 const serviceAccount = {
     "type": "service_account",
     "project_id": "cheap-flights-info",
@@ -13,17 +15,28 @@ const serviceAccount = {
     "client_x509_cert_url": process.env.CLIENT_X509
 }
 
-admin.initializeApp({
-    credential: admin.credential.cert(serviceAccount),
-    databaseURL: "https://cheap-flights-info-default-rtdb.europe-west1.firebasedatabase.app"
-})
-
-const db = admin.database()
+var db = undefined
 
 export const handler = async () => {
     
+    console.log("Flag: " + flag)
+
+    if (flag) {
+      
+      admin.initializeApp({
+          credential: admin.credential.cert(serviceAccount),
+          databaseURL: "https://cheap-flights-info-default-rtdb.europe-west1.firebasedatabase.app"
+      })
+      
+      db = admin.database()
+    }
+
+    flag = 0
+  
     const result = await db.ref('flights').once('value')
         .then(res=>res.val())
+
+    console.log("[+] RESULTS: " + JSON.stringify(result[0]))
 
     return {
       statusCode: 200,
