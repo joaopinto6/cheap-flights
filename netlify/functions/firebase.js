@@ -23,12 +23,18 @@ export const handler = async () => {
 
     if (flag) {
       
+      console.log("App iniciando")
+
       admin.initializeApp({
           credential: admin.credential.cert(serviceAccount),
           databaseURL: "https://cheap-flights-info-default-rtdb.europe-west1.firebasedatabase.app"
       })
+
+      console.log("App iniciada")
       
       db = admin.database()
+
+      console.log("database iniciada")
     }
 
     flag = 0
