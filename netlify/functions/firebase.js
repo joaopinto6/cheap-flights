@@ -16,6 +16,7 @@ const serviceAccount = {
 }
 
 var db = undefined
+var result = {}
 
 export const handler = async () => {
     
@@ -38,24 +39,23 @@ export const handler = async () => {
     }
 
     flag = 0
-    
-    const res={}
 
     console.log("Buscando dados")
-    const ref = await db.ref('flights')
+    const ref_res = await db.ref('flights')
+    
     console.log("REF > ONCE")
 
-    await ref.once('value', function(snapshot) {
-      console.log(snapshot.val())
+    await ref_res.on('value', (snap)=>{
+      result = snap.val()
     })
-    console.log("Dados buscados")
 
-    console.log("[+] RESULTS: " + JSON.stringify(res[0]))
+    console.log("Dados buscados")
+    console.log("RESULTS: " + JSON.stringify(result[0]))
 
     return {
       statusCode: 200,
       body: JSON.stringify({
-        res
+        result
       }),
     }
     }
