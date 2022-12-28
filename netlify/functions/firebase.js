@@ -39,8 +39,10 @@ export const handler = async () => {
 
     flag = 0
   
+    console.log("Buscando dados")
     const result = await db.ref('flights').once('value')
         .then(res=>res.val())
+    console.log("Dados buscados")
 
     console.log("[+] RESULTS: " + JSON.stringify(result[0]))
 
@@ -50,4 +52,5 @@ export const handler = async () => {
         result
       }),
     }
-  }
+    }
+
