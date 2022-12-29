@@ -18,7 +18,8 @@
   "homepage": "https://github.com/joaopinto6/cheap-flights#readme",
   "dependencies": {
     "dotenv": "^16.0.3",
-    "firebase-admin": "^11.4.1"
+    "firebase-admin": "^11.4.1",
+    "node-fetch": "^3.3.0"
   },
   "type": "module"
 }
