@@ -12,66 +12,87 @@
     <h1>Top Voos mais Baratos</h1>
     <p id="checkflights">loading...</p>
     <div id="info" class="flashcard-container">
-        <div class="flashcard">
-            <img alt="error">
-            <h2 class="country"></h2>
-            <p class="date"></p>
-            <p class="price"></p>
-        </div>
-        <div class="flashcard">
-            <img alt="error">
-            <h2 class="country"></h2>
-            <p class="date"></p>
-            <p class="price"></p>
-        </div>
-        <div class="flashcard">
-            <img alt="error">
-            <h2 class="country"></h2>
-            <p class="date"></p>
-            <p class="price"></p>
-        </div>
-        <div class="flashcard">
-            <img alt="error">
-            <h2 class="country"></h2>
-            <p class="date"></p>
-            <p class="price"></p>
-        </div>
-        <div class="flashcard">
-            <img alt="error">
-            <h2 class="country"></h2>
-            <p class="date"></p>
-            <p class="price"></p>
-        </div>
-        <div class="flashcard">
-            <img alt="error">
-            <h2 class="country"></h2>
-            <p class="date"></p>
-            <p class="price"></p>
-        </div>
-        <div class="flashcard">
-            <img alt="error">
-            <h2 class="country"></h2>
-            <p class="date"></p>
-            <p class="price"></p>
-        </div>
-        <div class="flashcard">
-            <img alt="error">
-            <h2 class="country"></h2>
-            <p class="date"></p>
-            <p class="price"></p>
-        </div>
-        <div class="flashcard">
-            <img alt="error">
-            <h2 class="country"></h2>
-            <p class="date"></p>
-            <p class="price"></p>
-        </div>
-        <div class="flashcard">
-            <img alt="error">
-            <h2 class="country"></h2>
-            <p class="date"></p>
-            <p class="price"></p>
-        </div>
+        <a class="url" target="_blank">
+            <div class="flashcard">
+                <img alt="error">
+                <h2 class="country"></h2>
+                <p class="date"></p>
+                <p class="price"></p>
+            </div>
+        </a>
+        <a class="url" target="_blank">
+            <div class="flashcard">
+                <img alt="error">
+                <h2 class="country"></h2>
+                <p class="date"></p>
+                <p class="price"></p>
+            </div>
+        </a>
+        <a class="url" target="_blank">
+            <div class="flashcard">
+                <img alt="error">
+                <h2 class="country"></h2>
+                <p class="date"></p>
+                <p class="price"></p>
+            </div>
+        </a>
+        <a class="url" target="_blank">
+            <div class="flashcard">
+                <img alt="error">
+                <h2 class="country"></h2>
+                <p class="date"></p>
+                <p class="price"></p>
+            </div>
+        </a>
+        <a class="url" target="_blank">
+            <div class="flashcard">
+                <img alt="error">
+                <h2 class="country"></h2>
+                <p class="date"></p>
+                <p class="price"></p>
+            </div>
+        </a>
+        <a class="url" target="_blank">
+            <div class="flashcard">
+                <img alt="error">
+                <h2 class="country"></h2>
+                <p class="date"></p>
+                <p class="price"></p>
+            </div>
+        </a>
+        <a class="url" target="_blank">
+            <div class="flashcard">
+                <img alt="error">
+                <h2 class="country"></h2>
+                <p class="date"></p>
+                <p class="price"></p>
+            </div>
+        </a>
+        <a class="url" target="_blank">
+            <div class="flashcard">
+                <img alt="error">
+                <h2 class="country"></h2>
+                <p class="date"></p>
+                <p class="price"></p>
+            </div>
+        </a>
+        <a class="url" target="_blank">
+            <div class="flashcard">
+                <img alt="error">
+                <h2 class="country"></h2>
+                <p class="date"></p>
+                <p class="price"></p>
+            </div>
+        </a>
+        <a class="url" target="_blank">
+            <div class="flashcard">
+                <img alt="error">
+                <h2 class="country"></h2>
+                <p class="date"></p>
+                <p class="price"></p>
+            </div>
+        </a>
+        
     </div>
 </body>
 <script>
@@ -81,6 +102,7 @@
     const country = document.getElementsByClassName('country')
     const date = document.getElementsByClassName('date')
     const price = document.getElementsByClassName('price')
+    const url = document.getElementsByClassName('url')
 
     window.addEventListener("load", async () => {
         const response = await fetch('/.netlify/functions/db')
@@ -94,6 +116,7 @@
             country[i].innerText = flights_array[i][0]
             date[i].innerText = flights_array[i][1]
             price[i].innerText = flights_array[i][2] + '€'
+            url[i].href = flights_array[i][3]
         }
 
         checkflights.innerHTML = ''
