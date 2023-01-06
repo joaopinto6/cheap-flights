@@ -25,7 +25,7 @@ p {
 }
 
 .flashcard-container > .flashcard {
-    flex: 1 1 30%;
+    flex: 0 1 30%;
 }
 
 .flashcard {

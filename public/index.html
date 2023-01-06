@@ -9,9 +9,39 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
 </head>
 <body>
-    <h1>Top 3 Voos mais Baratos</h1>
+    <h1>Top Voos mais Baratos</h1>
     <p id="checkflights">loading...</p>
     <div id="info" class="flashcard-container">
+        <div class="flashcard">
+            <img alt="error">
+            <h2 class="country"></h2>
+            <p class="date"></p>
+            <p class="price"></p>
+        </div>
+        <div class="flashcard">
+            <img alt="error">
+            <h2 class="country"></h2>
+            <p class="date"></p>
+            <p class="price"></p>
+        </div>
+        <div class="flashcard">
+            <img alt="error">
+            <h2 class="country"></h2>
+            <p class="date"></p>
+            <p class="price"></p>
+        </div>
+        <div class="flashcard">
+            <img alt="error">
+            <h2 class="country"></h2>
+            <p class="date"></p>
+            <p class="price"></p>
+        </div>
+        <div class="flashcard">
+            <img alt="error">
+            <h2 class="country"></h2>
+            <p class="date"></p>
+            <p class="price"></p>
+        </div>
         <div class="flashcard">
             <img alt="error">
             <h2 class="country"></h2>
@@ -56,7 +86,7 @@
         const response = await fetch('/.netlify/functions/db')
             .then(response => response.json())
 
-        const flights_array = response.flights.slice(0, 5)
+        const flights_array = response.flights.slice(0, 10)
 
         for (let i = 0; i < image.length; i++) {
             image[i].src = "assets/" + flights_array[i][0] + ".jpg"
