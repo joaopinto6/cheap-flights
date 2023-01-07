@@ -29,9 +29,9 @@ p {
 }
 
 .flashcard {
-    width: 33%;
-    margin: 20px;
+    width: 90%;
     box-sizing: border-box;
+    margin: 20px;
     padding: 0;
     text-align: center;
     box-shadow: 0px 0px 50px rgba(0,0,0,1);
