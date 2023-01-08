@@ -95,4 +95,10 @@ a {
     .flashcard p {
         font-size: 50px;
     }
+
+    .flashcard:hover {
+        box-shadow: 0px 0px 50px rgb(255, 255, 255);
+        background-color: none;
+        outline: none;
+    }
 }
